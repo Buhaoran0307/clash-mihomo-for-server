@@ -1,0 +1,9 @@
+external-controller: '0.0.0.0:9090'  #用于ui连接的地址，冒号前面一定要是0.0.0.0，包括云服务器，不然无法连接ui。0000改为自己想要的端口
+secret: '' #连接ui用的密钥，自己配置
+external-ui: /opt/clash/ui
+
+mixed-port: 7890
+socks-port: 7891
+redir-port: 7892
+allow-lan: true
+bind-address: "*"

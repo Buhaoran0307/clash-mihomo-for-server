@@ -1,0 +1,17 @@
+[Unit]
+Description=Clash Core Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/opt/clash/clash -d /opt/clash/
+KillSignal=SIGTERM
+Restart=on-failure
+RestartSec=2
+LimitNOFILE=1048576
+
+[Install]
+WantedBy=multi-user.target
+
